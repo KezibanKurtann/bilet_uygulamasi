@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab || www.codinglabweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş & Üye Formu</title>
+
+   
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/jquery.seat-charts.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/login_page_style.css">
+
+
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="form signup">
+        <header>Üye Ol</header>
+        <form action="#">
+          <input type="text" placeholder="İsim Soyisim" required />
+          <input type="text" placeholder="Email adres" required />
+          <input type="password" placeholder="Parola" required />
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck" />
+            <label for="signupCheck">Tüm şartlar ve koşulları kabul ediyorum.</label>
+          </div>
+          <input type="submit" value="Üye Ol" />
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>Giriş</header>
+        <form action="#">
+          <input type="text" placeholder="Email adres" required />
+          <input type="password" placeholder="Parola" required />
+          <a href="#">Parolamı unuttum?</a>
+          <input type="submit" value="Giriş" />
+        </form>
+      </div>
+
+      <script>
+        const wrapper = document.querySelector(".wrapper"),
+          signupHeader = document.querySelector(".signup header"),
+          loginHeader = document.querySelector(".login header");
+
+        loginHeader.addEventListener("click", () => {
+          wrapper.classList.add("active");
+        });
+        signupHeader.addEventListener("click", () => {
+          wrapper.classList.remove("active");
+        });
+      </script>
+    </section>
+  </body>
+</html>
